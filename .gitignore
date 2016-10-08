@@ -1,0 +1,7 @@
+venv
+bin
+include
+lib
+.DS_Store
+*.swp
+*~
