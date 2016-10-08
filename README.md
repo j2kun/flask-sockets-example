@@ -4,9 +4,9 @@ A demo app to learn to use rethinkdb behind a flask server, with socket.io for r
 
 # Complete stack #
 
-* [Flask](http://flask.pocoo.org)
-* [Backbone](http://backbonejs.org)
+* [Flask](http://flask.pocoo.org) using [flask-socketio](https://flask-socketio.readthedocs.io/en/latest/)
 * [RethinkDB](http://www.rethinkdb.com)
+* [Backbone](http://backbonejs.org)
 
 # Installation #
 
