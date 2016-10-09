@@ -2,43 +2,39 @@
 
 A demo app to learn to use rethinkdb behind a flask server, with socket.io for real time updates
 
-# Complete stack #
+# Complete stack 
 
 * [Flask](http://flask.pocoo.org) using [flask-socketio](https://flask-socketio.readthedocs.io/en/latest/)
 * [RethinkDB](http://www.rethinkdb.com)
-* [Backbone](http://backbonejs.org)
+* [WebSockets](http://socket.io/)
 
-# Installation #
+# Installation 
 
 ```
-git clone git://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo.git
-pip install Flask
-pip install rethinkdb
+git clone git://github.com/j2kun/rethink-example.git
+pip install -r requirements.txt
 ```
 
-# Start RethinkDB #
+# Start RethinkDB 
 
 Make sure you have RethinkDB running.  
-If you are not running RethinkDB on your local machine with the default settings,
-update the `todo.py` file on lines 21 and 22.
 
 _Note_: If you don't have RethinkDB installed, you can follow [these instructions to get it up and running](http://www.rethinkdb.com/docs/install/). 
 
 
-# Running the application #
+# Running the application 
 
-
-Firstly we'll need to create the database `todoapp` and the table used by this app: `todos`. You can
+Firstly we'll need to create the database `example` and the table used by this app: `chat`. You can
 do this by running:
 
 ```
-python todo.py --setup
+python init_db.py
 ```
 
 Flask provides an easy way to run the app:
 
 ```
-python todo.py
+python app.py
 ```
 
 Then open a browser: <http://localhost:5000/>.
