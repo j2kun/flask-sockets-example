@@ -1,40 +1,46 @@
-# Rethink example
+# Socket example
 
-A demo app to learn to use rethinkdb behind a flask server, with socket.io for real time updates
+A demo app to learn to use flask with socket.io for real time updates
 
 # Complete stack 
 
 * [Flask](http://flask.pocoo.org) using [flask-socketio](https://flask-socketio.readthedocs.io/en/latest/)
-* [RethinkDB](http://www.rethinkdb.com)
 * [WebSockets](http://socket.io/)
+* [RethinkDB](http://www.rethinkdb.com) (ignore for now, haven't picked a database)
 
 # Installation 
 
 ```
-git clone git://github.com/j2kun/rethink-example.git
+git clone git://github.com/j2kun/flask-sockets-example.git
+cd rethink-example
+virtualenv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-# Start RethinkDB 
+# Project structure
 
-Make sure you have RethinkDB running.  
-
-_Note_: If you don't have RethinkDB installed, you can follow [these instructions to get it up and running](http://www.rethinkdb.com/docs/install/). 
-
+```
+.
+├── README.md
+├── app.py                 <--- main flask program
+├── init_db.py
+├── requirements.txt
+├── static                 <--- third party javascript plugins
+│   ├── jquery.js
+│   └── socket.io.min.js
+└── templates              <--- html pages that get rendered by Flask
+    ├── blah.html
+    └── index.html
+```
 
 # Running the application 
 
-Firstly we'll need to create the database `example` and the table used by this app: `chat`. You can
-do this by running:
-
-```
-python init_db.py
-```
-
-Flask provides an easy way to run the app:
+Run the flask servery with
 
 ```
 python app.py
 ```
 
-Then open a browser: <http://localhost:5000/>.
+Then open a browser to <http://127.0.0.1:5000/blah/> to see the simple html page, 
+and open <http://127.0.0.1:5000/> in multiple windows to see the chat app.
