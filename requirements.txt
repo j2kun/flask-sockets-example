@@ -6,7 +6,7 @@ greenlet==0.4.10
 itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
-python-engineio==1.0.3
+python-engineio==3.8.2.post1
 python-socketio==1.6.0
 rethinkdb==2.3.0.post6
 six==1.10.0
